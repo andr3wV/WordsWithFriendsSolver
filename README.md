@@ -23,7 +23,7 @@ Ever wondered what the best possible word to play in Words with Friends or Scrab
  ```
 
  **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '?' and order does not matter (e.g `w?ihoud`).
-### Possible Future Improvements/Contributions:
+## Possible Future Improvements/Contributions:
 
 - Screenshot your current WWF board
   -  Upload the screenshot to the prgram
