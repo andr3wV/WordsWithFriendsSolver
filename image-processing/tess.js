@@ -5,7 +5,7 @@ var letters = [];
 const worker = createWorker();
 const worker2 = createWorker();
 
-//the board
+//the board - currently broken b/c no space awareness.
 (async () => {
   await worker.load();
   await worker.loadLanguage('eng');
