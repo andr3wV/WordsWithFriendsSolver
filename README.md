@@ -33,4 +33,4 @@ Ever wondered what the best possible word to play in Words with Friends or Scrab
   - A faster approach involving [The World's Fastest Scrabble Program](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s06/www/lectures/scrabble.pdf)
   - Possibility of using RegEx
 
-![Screenshot](https://github.com/andr3wV/words_with_friends_solver/blob/main/image-processor/images/screenshot.png)
+![Screenshot](https://github.com/andr3wV/words_with_friends_solver/blob/main/image-processing/images/screenshot.png)
