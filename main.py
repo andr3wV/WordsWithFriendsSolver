@@ -6,7 +6,7 @@ import Word as w
 def main():
     global debug, wildcard
     ''' Wildcard is represented as this character '''
-    wildcard = '?'
+    wildcard = '_'
     debug = False
 
     try:
@@ -120,7 +120,7 @@ def getWords(letters):
                                 if (debug):
                                     print('Used Wildcard: ' + char)
                                 good = True
-                                tmp = removeLetter(tmp, '?')
+                                tmp = removeLetter(tmp, '_')
 
                             else:
                                 good = False

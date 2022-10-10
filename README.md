@@ -22,11 +22,11 @@ Ever wondered what the best possible word to play in Words with Friends or Scrab
  $ python3 main.py <letters>
  ```
 
- **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '?' and order does not matter (e.g `w?ihoud`).
+ **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '_' and order does not matter (e.g `w_ihoud`).
 ## Possible Future Improvements/Contributions:
 
 - Screenshot your current WWF board
-  -  Upload the screenshot to the prgram
+  -  Upload the screenshot to the program
   - Scan the empty spots, the current words on the board & your letters
   - Application will then decide which words are best to be played
 - Increase efficiency by using alternative method to brute force
