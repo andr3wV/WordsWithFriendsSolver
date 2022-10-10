@@ -16,18 +16,24 @@ Ever wondered what the best possible word to play in Words with Friends or Scrab
  **Note**: you may have to force permissions (e.g. `sudo` on MacOS)
 ## Running
 
- Using `python3` command, enter the following:
+ Due to the testing I'm doing, you have to navigate to the `word-logic` folder: 
 
  ```bash
- $ python3 main.py <letters>
+ $ cd word-logic
+ ```
+
+ Then using `python3` command, enter the following:
+
+ ```bash
+ $ python3 word-logic/main.py <letters>
  ```
 
  **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '_' and order does not matter (e.g `w-ihoud`).
-## Possible Future Improvements/Contributions:
+## TODO:
 
 - Screenshot your current WWF board
   -  Upload the screenshot to the program
-  - Scan the empty spots, the current words on the board & your letters
+  - Scan the empty spots using an OCR (tesseract) to find the current words on the board & your letters
   - Application will then decide which words are best to be played
 - Increase efficiency by using alternative method to brute force
   - A faster approach involving [The World's Fastest Scrabble Program](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s06/www/lectures/scrabble.pdf)
