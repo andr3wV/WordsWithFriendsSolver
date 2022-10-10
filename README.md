@@ -1,5 +1,5 @@
 # Words With Friends Solver
-Ever wondered what the best possible word to play in Words with Friends or Scrabble is? Well now you can know with this python based program! Easily get an entire list of the best words your letters can play. 
+Ever wondered what the best possible word to play in Words with Friends or Scrabble is? Well now you can know with this python based program! Easily get an entire list of the best words your letters can play. The algorithm used generates moves by iterating over the words in a lexicon in reverse order of length (Credit to Peter Turcan of the University of Reading in England).
 
 >Note: Moves are currently calculated via brute force, but it still works decently fast. See Possible TODO section for more efficient future implementation ideas 
 
@@ -23,8 +23,6 @@ Ever wondered what the best possible word to play in Words with Friends or Scrab
  ```
 
  **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '?' and order does not matter (e.g `w?ihoud`).
- 
-Credit to Peter Turcan of the University of Reading in England for the algorithm used that generates moves by iterating over the words in a lexicon in reverse order of length.
 ## Possible Future Improvements/Contributions:
 
 - Screenshot your current WWF board
