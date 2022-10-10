@@ -1,7 +1,7 @@
 # Words With Friends Solver
 Ever wondered what the best possible word to play in Words with Friends or Scrabble is? Well now you can know with this python based program! Easily get an entire list of the best words your letters can play. 
 
->Note: The method is currently brute forced and works decently fast. See Possible TODO section for more efficient future implementation ideas 
+>Note: Moves are currently calculated via brute force, but it still works decently fast. See Possible TODO section for more efficient future implementation ideas 
 
 ### Requirements
   - `python3` or greater
