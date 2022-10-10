@@ -23,6 +23,8 @@ Ever wondered what the best possible word to play in Words with Friends or Scrab
  ```
 
  **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '?' and order does not matter (e.g `w?ihoud`).
+ 
+Credit to Peter Turcan of the University of Reading in England for the algorithm used that generates moves by iterating over the words in a lexicon in reverse order of length.
 ## Possible Future Improvements/Contributions:
 
 - Screenshot your current WWF board
