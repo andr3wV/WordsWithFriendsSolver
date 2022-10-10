@@ -22,7 +22,7 @@ Ever wondered what the best possible word to play in Words with Friends or Scrab
  $ python3 main.py <letters>
  ```
 
- **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '_' and order does not matter (e.g `w_ihoud`).
+ **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '_' and order does not matter (e.g `w-ihoud`).
 ## Possible Future Improvements/Contributions:
 
 - Screenshot your current WWF board
