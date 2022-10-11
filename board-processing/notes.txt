@@ -1,0 +1,1 @@
+Takes in the Board and tiles arrays from ../image-processing and finds all the possible words that can be played. Once we have all these words, we will use ../word-logic to score these words and ultimately take the highest score. 
