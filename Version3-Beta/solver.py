@@ -158,3 +158,4 @@ solver = SolveState(basic_english(), sample_board(), ['e', 'f', 'f', 'e', 'c', '
 print(solver.board)
 print()
 solver.find_all_options()
+

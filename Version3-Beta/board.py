@@ -48,3 +48,5 @@ def sample_board():
     result.set_tile((2, 1), 'f')
     result.set_tile((2, 5), 'r')
     return result
+
+    
