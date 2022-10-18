@@ -41,6 +41,3 @@ class Board:
         for pos in self.all_positions():
             result.set_tile(pos, self.get_tile(pos))
         return result
-
-
-

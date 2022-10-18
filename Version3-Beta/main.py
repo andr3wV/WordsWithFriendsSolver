@@ -2,10 +2,9 @@ import solver
 import tree
 import settings
 import board
-
 settings.init();
 
-#creates LetterTree from our dictionary
+####creates LetterTree from our dictionary####
 def set_dict():
     with open('dictionary.txt', 'rt') as file:
         words = []
@@ -14,7 +13,7 @@ def set_dict():
             words.append(word)
     return tree.LetterTree(words)
 
-#creates the board
+####creates the board####
 def set_board():
     result = board.Board(15)
     result.set_tile((8, 7), 'g')

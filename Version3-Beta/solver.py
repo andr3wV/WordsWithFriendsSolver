@@ -155,7 +155,3 @@ class SolveState:
                         limit = limit + 1
                         scan_pos = self.before(scan_pos)
                     self.before_part("", self.dictionary.root, anchor_pos, limit)
-
-
-
-
