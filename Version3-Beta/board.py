@@ -42,11 +42,5 @@ class Board:
             result.set_tile(pos, self.get_tile(pos))
         return result
 
-def sample_board():
-    result = Board(7)
-    result.set_tile((1, 1), 'o')
-    result.set_tile((2, 1), 'f')
-    result.set_tile((2, 5), 'r')
-    return result
 
-    
+

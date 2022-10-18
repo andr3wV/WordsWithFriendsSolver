@@ -27,11 +27,3 @@ class LetterTree:
         if word_node is None:
             return False
         return word_node.is_word
-
-def basic_english():
-    with open('dictionary.txt', 'rt') as file:
-        words = []
-        for line in file:
-            word = line.strip()
-            words.append(word)
-    return LetterTree(words)
