@@ -1,5 +1,6 @@
-from tree import basic_english
-from board import sample_board
+import settings
+settings.init();
+import Word
 
 class SolveState:
     def __init__(self, dictionary, board, rack):
@@ -39,6 +40,7 @@ class SolveState:
 
     def legal_move(self, word, last_pos):
         print('found a word:', word)
+        settings.wordList.append(Word.Word(word)) # appends the word into a global var for word scoring
         board_if_we_played_that = self.board.copy()
         play_pos = last_pos
         word_idx = len(word) - 1
@@ -154,8 +156,6 @@ class SolveState:
                         scan_pos = self.before(scan_pos)
                     self.before_part("", self.dictionary.root, anchor_pos, limit)
 
-solver = SolveState(basic_english(), sample_board(), ['e', 'f', 'f', 'e', 'c', 't'])
-print(solver.board)
-print()
-solver.find_all_options()
+
+
 
