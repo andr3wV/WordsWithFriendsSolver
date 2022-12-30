@@ -155,3 +155,5 @@ class SolveState:
                         limit = limit + 1
                         scan_pos = self.before(scan_pos)
                     self.before_part("", self.dictionary.root, anchor_pos, limit)
+        settings.wordList.sort(key=lambda x: x.points, reverse=True) # sorts word list by point value
+        print(settings.wordList[0].word)

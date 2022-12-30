@@ -60,11 +60,8 @@ def set_rack2():
     rack = rack.split(" ")
     return rack
 
-
 #################TESTER BOARD##############################################
 game = solver.SolveState(set_dict(), set_board(), set_rack2())
 print(game.board)
 print()
 game.find_all_options()
-settings.wordList.sort(key=lambda x: x.points, reverse=True) # sorts word list by point value
-print(settings.wordList[0].word)
