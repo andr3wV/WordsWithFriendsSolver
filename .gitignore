@@ -3,6 +3,5 @@ __pycache__/
 notes.txt
 .DS_Store
 .gitignore
-images/
 output/
 package-lock.json
