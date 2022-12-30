@@ -1,7 +1,9 @@
-import solver
-import tree
-import settings
-import board
+import sys 
+sys.path.append('./wordAlgo')
+from wordAlgo import solver
+from wordAlgo import tree
+from wordAlgo import settings
+from wordAlgo import board
 import math
 settings.init();
 
@@ -24,7 +26,7 @@ def read_text_file_to_array(file_path):
     return array
 
 # Use the function to read a text file and store the lines in an array
-array = read_text_file_to_array('../image-processing/output/tessOutput.txt') 
+array = read_text_file_to_array('./output/tessOutput.txt') 
 print(array)   
 
 ####creates LetterTree from our dictionary####
