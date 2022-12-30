@@ -24,7 +24,8 @@ def read_text_file_to_array(file_path):
     return array
 
 # Use the function to read a text file and store the lines in an array
-array = read_text_file_to_array('../image-processing/output/tessOutput.txt')    
+array = read_text_file_to_array('../image-processing/output/tessOutput.txt') 
+print(array)   
 
 ####creates LetterTree from our dictionary####
 def set_dict():
@@ -35,22 +36,31 @@ def set_dict():
             words.append(word)
     return tree.LetterTree(words)
 
-####change this to what tesseract outputs####
 def set_board():
-    exclude = ['[', ']', '-', '|']
+    #exclude = ['[', ']', '-', '|']
     result = board.Board(15)
     for i in range(len(array)-1):
-         if len(array[i])<=1 and '-' not in array[i] and '[' not in array[i] and ']' not in array[i] and '|' not in array[i]:
-             result.set_tile((math.ceil(i/15-1),i%15-1),array[i])
+        if i%2==0: 
+            tileNum = array[i+1]
+            result.set_tile((math.ceil(int(tileNum)/15-1),int(tileNum)%15-1),array[i])
     return result
 
-#Data receieved from teserract will set the user's rack
+# Data receieved from teserract will set the user's rack
 def set_rack():
     rack = array[-1].split(",")
     return rack
 
+# User input rack
+def set_rack2():
+    # Prompt the user to enter their rack
+    rack = input("Enter your rack with spaces in between each letter: ")
+    # Split the input string into a list of tiles
+    rack = rack.split(" ")
+    return rack
+
+
 #################TESTER BOARD##############################################
-game = solver.SolveState(set_dict(), set_board(), set_rack()) 
+game = solver.SolveState(set_dict(), set_board(), set_rack2())
 print(game.board)
 print()
 game.find_all_options()
