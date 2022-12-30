@@ -9,7 +9,7 @@ const OCRAD = require('async-ocrad');
 const imageSlicingOpts = {
   lineYArray: [],
   lineXArray: [], 
-  source: './images/image08.png',
+  source: './images/image04.png',
   saveToDir: './images/slicedImages',
 };
 
@@ -152,13 +152,6 @@ async function tesseract(outputFileName) {
   }  
   console.log('Tesseract successfully read the board!');
 
-  // //reads rack photo into rack array
-  // const { data: { text } } = await worker.recognize('./images/slicedImages/rack.png');
-  // for(i in text) rack.push(text[i]); // add letters to rack array
-  // rack = rack.filter(function(str) {return /\S/.test(str);}); //remove white space
-  // fs.appendFileSync(`./output/${outputFileName}`, rack.toString());
-  // console.log('Tesseract successfully read the rack!');
-
   //populates rack at end of file using OCRAD which reads better than tesseract
   var ocr = await OCRAD('./images/slicedImages/rack.png');
   fs.appendFileSync(`./output/${outputFileName}`, ocr);
@@ -167,8 +160,6 @@ async function tesseract(outputFileName) {
   console.log('Terminating Tesseract.');
   await worker.terminate();
 }
-
-
 
 async function main(){
   await findPixel(237, 236, 233);
@@ -179,5 +170,3 @@ async function main(){
 }
 
 main();
-
-//findPixel('./images/image06.png', 237, 236, 233); // Find the first pixel with RGB values 255, 0, 0 (red)
