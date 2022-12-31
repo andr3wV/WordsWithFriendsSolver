@@ -5,11 +5,13 @@ const { createWorker } = require('tesseract.js');
 const PSM = require('tesseract.js/src/constants/PSM.js'); 
 const OCR = require('tesseract.js/src/constants/OEM.js');
 const OCRAD = require('async-ocrad');
+const readline = require('readline'); // Import the readline module
+
 
 const imageSlicingOpts = {
-  lineYArray: [],
-  lineXArray: [], 
-  source: './images/image04.png',
+  lineYArray: [], // None needed
+  lineXArray: [], // Set the slicing property to an empty string
+  source: '', // Set the source property to an empty string
   saveToDir: './images/slicedImages',
 };
 
@@ -28,6 +30,23 @@ imageToSlices.configure({
         canvas: require('canvas')
     }
 });
+
+async function input(){
+return new Promise((resolve, reject) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
+    rl.question('Enter the image file name: ', (imageFileName) => {
+      // Set the imageSlicingOpts.source property to the user-specified image file name
+      imageSlicingOpts.source = `./images/${imageFileName}`;
+
+      rl.close();
+      resolve(input);
+    });
+  });
+}
 
 async function findPixel(red, green, blue) {
   let foundPixel = 0; // Flag variable to track whether the desired pixel has been found
@@ -162,6 +181,7 @@ async function tesseract(outputFileName) {
 }
 
 async function main(){
+  await input()
   await findPixel(237, 236, 233);
   await sliceImage();
   await playedTile();
