@@ -1,4 +1,6 @@
+
 ![banner](https://i.imgur.com/KhE1LVD.png?1)
+
 # Words With Friends Solver
 Ever wondered what the best possible word to play in Words with Friends is? Well now you can know with this program! Easily generate the best words your letters can play on the board. Simply upload a screenshot of your board, and this program will do the rest for you!
 
@@ -29,12 +31,13 @@ Install Javascript dependencies:
 ## Running
 
 Take a screenshot of your board and place it in the `images` directory.  A proper image should have the entire board fully in view (NOT zoomed in) like so: 
-![screenshot](https://i.imgur.com/StMkF0Q.png?1){:height="20%" width="20%"}
+<img src="https://i.imgur.com/StMkF0Q.png?1" height="25%" width="25%">
 Next, run the following in your command line interface:
  ```bash
  $ npm start
  ```
  Provide the image file name of your screenshot. Hit enter. Then letters in your rack separated by spaces. Hit enter.
+
 ## Issues
 There are a few reasons why this program may fail:
 - Your screenshot image is zoomed in, blurry, or modified.
@@ -46,4 +49,3 @@ There are a few reasons why this program may fail:
 - Automate rack so user doesn't have to input.
 - Support Blank Tiles
 - Add boost tile support
-
