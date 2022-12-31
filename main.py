@@ -27,7 +27,6 @@ def read_text_file_to_array(file_path):
 
 # Use the function to read a text file and store the lines in an array
 array = read_text_file_to_array('./output/tessOutput.txt') 
-print(array)   
 
 ####creates LetterTree from our dictionary####
 def set_dict():
@@ -61,7 +60,8 @@ def set_rack2():
     return rack
 
 #################TESTER BOARD##############################################
-game = solver.SolveState(set_dict(), set_board(), set_rack2())
+#game = solver.SolveState(set_dict(), set_board(), set_rack2())
+game = solver.SolveState(set_dict(), set_board(), ['m', 'o', 't', 'r', 'p', 'a', 'i'])
 print(game.board)
 print()
 game.find_all_options()

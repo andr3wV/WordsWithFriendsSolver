@@ -9,6 +9,8 @@ class SolveState:
         self.rack = rack
         self.cross_check_results = None
         self.direction = None
+        self.highest_score = 0
+        self.best_board = None
 
     def before(self, pos):
         row, col = pos
@@ -39,7 +41,6 @@ class SolveState:
             return row, col + 1
 
     def legal_move(self, word, last_pos):
-        print('found a word:', word)
         settings.wordList.append(Word.Word(word)) # appends the word into a global var for word scoring
         board_if_we_played_that = self.board.copy()
         play_pos = last_pos
@@ -48,8 +49,14 @@ class SolveState:
             board_if_we_played_that.set_tile(play_pos, word[word_idx])
             word_idx -= 1
             play_pos = self.before(play_pos)
-        print(board_if_we_played_that)
-        print()
+
+        # Calculate the score for the word
+        score = Word.Word(word).points
+        if score > self.highest_score:
+            # Update the highest score and best board if necessary
+            self.highest_score = score
+            self.best_board = board_if_we_played_that
+
 
     def cross_check(self):
         result = dict()
@@ -156,4 +163,7 @@ class SolveState:
                         scan_pos = self.before(scan_pos)
                     self.before_part("", self.dictionary.root, anchor_pos, limit)
         settings.wordList.sort(key=lambda x: x.points, reverse=True) # sorts word list by point value
-        print(settings.wordList[0].word)
+        print(self.best_board)
+        print()
+        print(f"Best word to play: {settings.wordList[0].word}")
+        print(f"Facevalue Score: {self.highest_score}")
