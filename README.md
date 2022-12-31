@@ -1,11 +1,18 @@
+![banner](https://imgur.com/a/5nDdlvP)
 # Words With Friends Solver
-Ever wondered what the best possible word to play in Words with Friends or Scrabble is? Well now you can know with this python based program! Easily get an entire list of the best words your letters can play. The algorithm used generates moves by iterating over the words in a lexicon in reverse order of length (Credit to Peter Turcan of the University of Reading in England).
+Ever wondered what the best possible word to play in Words with Friends is? Well now you can know with this program! Easily generate the best words your letters can play on the board. Simply upload a screenshot of your board, and this program will do the rest for you!
 
->Note: Moves are currently calculated via brute force, but it still works decently fast. See Possible TODO section for more efficient future implementation ideas 
+### How It Works
+The program uses matrix color gradient recognition to detect the edges of the gameboard, and uses a combination of the Tesseract.js and the ORCAD.js OCRs to read the tiles that have been played. Resizing, grayscaling, and a threshold are applied to newly generated images. Then, a quasi-unique tree structure is utilized for prefix and suffix generation on each of the open tiles on the board (see wordAlgo and tess.js folder for detailed code) and each of these words generated is scored and shown accordingly.  
 
-### Requirements
-  - `python3` or greater
-  - Command Line Interface (CLI) like terminal
+## Requirements
+ - `node` 5.0.0 or greater
+ - `npm` 
+ - `python3` 
+ - Words With Friends 2: v16.30.3
+
+ **Note**: Install the latest version `node` and `npm` from [here](https://nodejs.org/en/download/) and python3 from [here](https://www.python.org/downloads/).
+   
 ## Install
 
  Install `pytest` to your system path using `pip3`:
@@ -14,29 +21,29 @@ Ever wondered what the best possible word to play in Words with Friends or Scrab
  $ pip3 install pytest
   ```
  **Note**: you may have to force permissions (e.g. `sudo` on MacOS)
+
+Install Javascript dependencies: 
+```bash
+ $ npm install
+  ```
 ## Running
 
- Due to the testing I'm doing, you have to navigate to the `word-logic` folder: 
-
+Take a screenshot of your board and place it in the `images` directory.  A proper image should have the entire board fully in view (NOT zoomed in) like so: 
+![screenshot](https://imgur.com/a/aCNbpYO)
+Next, run the following in your command line interface:
  ```bash
- $ cd word-logic
+ $ npm start
  ```
+ Provide the image file name of your screenshot. Hit enter. Then letters in your rack separated by spaces. Hit enter.
+## Issues
+There are a few reasons why this program may fail:
+- Your screenshot image is zoomed in, blurry, or modified.
+- You do not have Words with Friends 2 or the supported version.
+- You have tile styles enabled (disable them in Settings)
+- I haven't updated the program in a while (please submit an issue [here](https://github.com/andr3wV/words_with_friends_solver/issues))
 
- Then using `python3` command, enter the following:
-
- ```bash
- $ python3 word-logic/main.py <letters>
- ```
-
- **letters** : enter the the letters the user has available to them in a row without spaces. A blank letter is respresented by a '_' and order does not matter (e.g `w-ihoud`).
 ## TODO:
+- Automate rack so user doesn't have to input.
+- Support Blank Tiles
+- Add boost tile support
 
-- Screenshot your current WWF board
-  -  Upload the screenshot to the program
-  - Scan the empty spots using an OCR (tesseract) to find the current words on the board & your letters
-  - Application will then decide which words are best to be played
-- Increase efficiency by using alternative method to brute force
-  - A faster approach involving [The World's Fastest Scrabble Program](https://www.cs.cmu.edu/afs/cs/academic/class/15451-s06/www/lectures/scrabble.pdf)
-  - Possibility of using RegEx
-
-![Screenshot](https://github.com/andr3wV/words_with_friends_solver/blob/main/image-processing/images/screenshot.png)
