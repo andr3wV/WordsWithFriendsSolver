@@ -21,9 +21,8 @@ def read_text_file_to_array(file_path):
         # Strip the newline character from the end of the line
         line = line.strip()
         # Append the line to the array
-        if(line == '|'):
-            
-            line == 'i'
+        if('|' in line):
+            line = 'i'
         array.append(line.lower())
 
     return array
