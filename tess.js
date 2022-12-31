@@ -171,9 +171,9 @@ async function tesseract(outputFileName) {
   }  
   console.log('Tesseract successfully read the board!');
 
-  //populates rack at end of file using OCRAD which reads better than tesseract
-  var ocr = await OCRAD('./images/slicedImages/rack.png');
-  fs.appendFileSync(`./output/${outputFileName}`, ocr);
+  // //populates rack at end of file using OCRAD which reads better than tesseract
+  // var ocr = await OCRAD('./images/slicedImages/rack.png');
+  // fs.appendFileSync(`./output/${outputFileName}`, ocr);
 
 
   console.log('Terminating Tesseract.');

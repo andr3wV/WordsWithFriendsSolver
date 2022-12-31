@@ -21,6 +21,9 @@ def read_text_file_to_array(file_path):
         # Strip the newline character from the end of the line
         line = line.strip()
         # Append the line to the array
+        if(line == '|'):
+            
+            line == 'i'
         array.append(line.lower())
 
     return array
@@ -60,8 +63,9 @@ def set_rack2():
     return rack
 
 #################TESTER BOARD##############################################
-#game = solver.SolveState(set_dict(), set_board(), set_rack2())
-game = solver.SolveState(set_dict(), set_board(), ['m', 'o', 't', 'r', 'p', 'a', 'i'])
+game = solver.SolveState(set_dict(), set_board(), set_rack2())
+#game = solver.SolveState(set_dict(), set_board(), ['m', 'o', 't', 'r', 'p', 'a', 'i'])
+
 print(game.board)
 print()
 game.find_all_options()
