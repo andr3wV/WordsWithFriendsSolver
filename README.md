@@ -29,6 +29,12 @@ Install Javascript dependencies:
  $ npm install
   ```
 ## Running
+Clone this repo. 
+
+Make an `images` directory by running: 
+```back
+$ mkdir images
+```
 
 Take a screenshot of your board and place it in the `images` directory.  A proper image should have the entire board fully in view (NOT zoomed in) like so: 
 
