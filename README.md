@@ -32,6 +32,7 @@ Install Javascript dependencies:
 
 Take a screenshot of your board and place it in the `images` directory.  A proper image should have the entire board fully in view (NOT zoomed in) like so: 
 <img src="https://i.imgur.com/StMkF0Q.png?1" height="25%" width="25%">
+
 Next, run the following in your command line interface:
  ```bash
  $ npm start
