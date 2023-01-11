@@ -1,5 +1,5 @@
 
-![banner](https://imgur.com/7HM68Hj)
+![banner](https://i.imgur.com/7HM68Hj.png?1)
 
 # Words With Friends Solver
 Ever wondered what the best possible word to play in Words with Friends is? Well now you can know with this program! Easily generate the best words your letters can play on the board. Simply upload a screenshot of your board, and this program will do the rest for you!
