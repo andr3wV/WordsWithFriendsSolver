@@ -1,5 +1,6 @@
 
 ![banner](https://i.imgur.com/KhE1LVD.png?1)
+[Imgur](https://imgur.com/7HM68Hj)
 
 # Words With Friends Solver
 Ever wondered what the best possible word to play in Words with Friends is? Well now you can know with this program! Easily generate the best words your letters can play on the board. Simply upload a screenshot of your board, and this program will do the rest for you!
@@ -48,7 +49,7 @@ Next, run the following in your command line interface:
  ```
  Provide the image file name of your screenshot. Hit enter. Then letters in your rack separated by spaces. Hit enter.
 
-## Issues
+## Error Handling
 There are a few reasons why this program may fail:
 - Your screenshot image is zoomed in, blurry, or modified.
 - You do not have Words with Friends 2 or the supported version.
