@@ -7,6 +7,8 @@ Ever wondered what the best possible word to play in Words with Friends is? Well
 ### How It Works
 The program uses matrix color gradient recognition to detect the edges of the gameboard, and uses a combination of the Tesseract.js and the ORCAD.js OCRs to read the tiles that have been played. Resizing, grayscaling, and a threshold are applied to newly generated images. Then, a quasi-unique tree structure is utilized for prefix and suffix generation on each of the open tiles on the board (see wordAlgo and tess.js folder for detailed code) and each of these words generated is scored and shown accordingly.  
 
+Detailed video explanation on algorithm [here](https://youtu.be/nkpNFOhN__E).
+
 ## Requirements
  - `node` 5.0.0 or greater
  - `npm` 
@@ -55,7 +57,8 @@ There are a few reasons why this program may fail:
 - You have tile styles enabled (disable them in Settings)
 - I haven't updated the program in a while (please submit an issue [here](https://github.com/andr3wV/words_with_friends_solver/issues))
 
-## TODO:
+## Future Work
 - Automate rack so user doesn't have to input.
 - Support Blank Tiles
 - Add boost tile support
+- Finetune and make public UI
